@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/9a347b5868.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="calculadora">
+    <!-- Pantalla donde se muestra lo que el usuario va escribiendo -->
+    <div id="pantalla">0</div>
+
+    <!-- Fila 1: borrar todo, borrar último dígito, porcentaje, división -->
+<div class="fila">
+    <button class="btn-especial" onclick="reiniciar()">AC</button>
+
+    <button class="btn-especial" onclick="borrarUltimo()">
+      <i class="fa-solid fa-delete-left"></i></button> <!-- ícono de borrar que salió de font awesome -->
+    <button class="btn-operador" onclick="agregarOperador('/')">
+      <i class="fa-solid fa-divide" style="color: #7a5c00"></i> <!-- ícono de división que salió de font awesome -->
+    </button>
+    <button class="btn-operador" onclick="agregarOperador('%')">%</button>
+</div>
+
+    <!-- Fila 2: números 7,8,9 y simbolo de la multiplicación -->
+    <div class="fila">
+      <button class="btn-numero" onclick="agregarNumero('7')">7</button>
+      <button class="btn-numero" onclick="agregarNumero('8')">8</button>
+      <button class="btn-numero" onclick="agregarNumero('9')">9</button>
+      <button class="btn-operador" onclick="agregarOperador('*')">
+        <i class="fa-solid fa-xmark" style="color:  #7a5c00;"></i> <!-- ícono de multiplicaión que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Fila 3: números 4,5,6 y simbolo de la resta -->
+    <div class="fila">
+      <button class="btn-numero" onclick="agregarNumero('4')">4</button>
+      <button class="btn-numero" onclick="agregarNumero('5')">5</button>
+      <button class="btn-numero" onclick="agregarNumero('6')">6</button>
+      <button class="btn-operador" onclick="agregarOperador('-')">
+        <i class="fa-solid fa-minus" style="color:  #7a5c00;"></i> <!-- ícono de suma que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Fila 4: números 1,2,3 y simbolo de la suma -->
+    <div class="fila">
+      <button class="btn-numero" onclick="agregarNumero('1')">1</button>
+      <button class="btn-numero" onclick="agregarNumero('2')">2</button>
+      <button class="btn-numero" onclick="agregarNumero('3')">3</button>
+      <button class="btn-operador" onclick="agregarOperador('+')">
+        <i class="fa-solid fa-plus" style="color:  #7a5c00;"></i> <!-- ícono de suma que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Fila 5: cero, coma decimal y simbolo del igual -->
+    <div class="fila">
+      <button class="btn-numero btn-cero" onclick="agregarNumero('0')">0</button>
+      <button class="btn-numero" onclick="agregarNumero(',')">,</button>
+      <button class="btn-igual" onclick="calcular()">
+        <i class="fa-solid fa-equals" style="color: #172e13;"></i> <!-- ícono de igual que salió de font awesome -->
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
