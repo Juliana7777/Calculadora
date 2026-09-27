@@ -31,8 +31,8 @@ function agregarOperador(operador) {
   const operadores = ['+', '-', '*', '/', '%'];
 
   if (operadores.includes(ultimoCaracter)) {
-    // Si el último carácter YA es un operador, lo reemplazamos por el nuevo
-    // (para evitar algo como "12++")
+    // INVESTIGACIÓN : Si el último carácter YA es un operador, lo reemplazamos por el nuevo para evitar algo como "12++" porque esp sería icnorrecto.
+    
     operacion = operacion.slice(0, -1) + operador;
   } else {
     operacion = operacion + operador;
